@@ -48,16 +48,16 @@ public class Voiture
 	
 	public boolean seDeplace()
 	{
-		
+		boolean toReturn = false;
 		//on test si celluleCourante pas null sinon erreur
 		if(this.celluleCourante != null)
 		{
 			//on test si celluleSuivantes pas null sinon bouge pas
-			int suivantAleatoire = 1 + (int)(Math.random() * ((this.celluleCourante.suivants.size() - 1)));
 			
-			if(this.celluleCourante.suivants.get(suivantAleatoire) != null)
+			if(this.choixSuivant() != null)
 			{
-				
+				this.celluleCourante=choixSuivant();
+				toReturn = true;
 			}
 			else
 			{
@@ -68,8 +68,7 @@ public class Voiture
 		{
 			System.out.println("ERREUR ! Cellule courante nulle !");
 		}
-		
-		//on test si celluleSuivantes est libre sinon on passe à la suivante
+		return toReturn;
 	}
 	
 	// CONSTRUCTEURS
