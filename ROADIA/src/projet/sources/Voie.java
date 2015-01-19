@@ -18,7 +18,11 @@ public class Voie
 		
 		for(int i = 0;i<taille;i++)
 		{
-			this.voie[i] = new Cellule(this.nomVoie + "C"+i);	
+			this.voie[i] = new Cellule(this.nomVoie + "C"+i);
+			if(i>0)
+			{
+				this.voie[i-1].suivants.add(this.voie[i]);
+			}
 		}
 		
 	}

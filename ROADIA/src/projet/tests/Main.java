@@ -1,6 +1,6 @@
 package projet.tests;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 import projet.sources.Cellule;
@@ -23,7 +23,7 @@ public class Main
 		System.out.println(cell2);
 		//int nombreAleatoire = 1 + (int)(Math.random() * ((voie1.getVoie().length - 1) + 1));
 		//System.out.println(nombreAleatoire);
-
+/*
 		ArrayList listeExemple = new ArrayList();
 		listeExemple.add("A");
 		listeExemple.add("B");
@@ -40,16 +40,16 @@ public class Main
 		System.out.println("Initial collection: "+listeExemple);
 		Collections.shuffle(listeExemple);
 		System.out.println("Final   collection: "+listeExemple);
-
-		Voie voie1 = new Voie("A", 5);
-		Voie voie2 = new Voie("B", 1);
-		System.out.println(voie1);
+*/
+		//Voie voie1 = new Voie("A", 5);
+		Voie voie2 = new Voie("B", 7);
+		//System.out.println(voie1);
 		System.out.println(voie2);
 		
 		Voiture voiture1 = new Voiture("VoitureTest1",voie2);
 		System.out.println(voie2);
-
-
+		voiture1.seDeplace();
+		System.out.println(voie2);
 		
 
 

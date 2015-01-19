@@ -25,12 +25,13 @@ public class Voiture
 		
 		ArrayList<Cellule> suivantsDesordre = suivantsAleatoire();
 		Iterator<Cellule> it = suivantsDesordre.iterator();
-		Cellule toReturn = it.next();
+		Cellule toReturn = null;
+		//Cellule toReturn = it.next();
 		while ( (it.hasNext()) )
 		{
 			if(it.next().isOccupe() == true)
 			{
-				//suivantsDesordre.remove(0);
+				suivantsDesordre.remove(0);
 			}
 			else if (it.next().isOccupe() == false)
 			{
