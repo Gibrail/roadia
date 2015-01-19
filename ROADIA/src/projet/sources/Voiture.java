@@ -19,7 +19,7 @@ public class Voiture
 		return maliste;
 		
 	}
-	
+/*	
 	public Cellule choixSuivant()
 	{
 		
@@ -41,10 +41,28 @@ public class Voiture
 		}
 		return toReturn;
 	}
+*/	
+	public Cellule choixSuivant()
+	{
+		
+		ArrayList<Cellule> suivantsDesordre = suivantsAleatoire();
+		for(Iterator<Cellule> it = suivantsDesordre.iterator(); it.hasNext(); )
+		{
+			Cellule currentCell = it.next() ;
+			if(currentCell.isOccupe() == true)
+			{
+				suivantsDesordre.remove(0);
+			}
+			else if (currentCell.isOccupe() == false)
+			{
+				return currentCell;
+			}
+		}
+		return this.getCelluleCourante();
+	}
+
 	
-	
-	
-	
+
 	//METHODE
 	
 	public boolean seDeplace()
@@ -57,7 +75,9 @@ public class Voiture
 			
 			if(this.choixSuivant() != null)
 			{
+				this.celluleCourante.setOccupe(false);
 				this.celluleCourante=choixSuivant();
+				this.celluleCourante.setOccupe(true);
 				toReturn = true;
 			}
 			else

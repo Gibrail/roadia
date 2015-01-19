@@ -42,7 +42,7 @@ public class Main
 		System.out.println("Final   collection: "+listeExemple);
 */
 		//Voie voie1 = new Voie("A", 5);
-		Voie voie2 = new Voie("B", 7);
+		Voie voie2 = new Voie("B", 6);
 		//System.out.println(voie1);
 		System.out.println(voie2);
 		
