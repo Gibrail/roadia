@@ -78,7 +78,12 @@ public class Voiture
 	{
 		this.nomVoiture = nouveauNomVoiture;
 		//TODO la voiture ne doit pas s'instancier là où il y en a une
-		int nombreAleatoire = 1 + (int)(Math.random() * ((voie.getVoie().length - 1) ));
+		int nombreAleatoire = 1 + (int)(Math.random() * ((voie.getVoie().length -1) ));
+		if((voie.getVoie().length -1) <= 1)
+		{
+			nombreAleatoire = 0;
+		}
+		System.out.println(nombreAleatoire);
 		this.celluleCourante = voie.getVoie()[nombreAleatoire];
 		this.celluleCourante.setOccupe(true);
 	}
