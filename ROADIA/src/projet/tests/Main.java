@@ -5,6 +5,7 @@ import java.util.Collections;
 
 import projet.sources.Cellule;
 import projet.sources.Voie;
+import projet.sources.Voiture;
 
 
 public class Main 
@@ -40,13 +41,13 @@ public class Main
 		Collections.shuffle(listeExemple);
 		System.out.println("Final   collection: "+listeExemple);
 
-		Voie voie1 = new Voie("A", -5);
+		Voie voie1 = new Voie("A", 5);
 		Voie voie2 = new Voie("B", 1);
 		System.out.println(voie1);
 		System.out.println(voie2);
 		
-		//Voiture voiture1 = new Voiture("VoitureTest1",voie2);
-		//System.out.println(voie2);
+		Voiture voiture1 = new Voiture("VoitureTest1",voie2);
+		System.out.println(voie2);
 
 
 		
