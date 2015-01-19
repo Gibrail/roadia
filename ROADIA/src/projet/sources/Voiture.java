@@ -30,7 +30,7 @@ public class Voiture
 		{
 			if(it.next().isOccupe() == true)
 			{
-				suivantsDesordre.remove(0);
+				//suivantsDesordre.remove(0);
 			}
 			else if (it.next().isOccupe() == false)
 			{
