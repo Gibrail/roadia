@@ -44,7 +44,7 @@ public class TestFounetre
 	private void initialize()
 	{
 		frame = new JFrame();
-		frame.setBounds(100, 100, 601, 434);
+		frame.setBounds(100, 100, 551, 359);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0};

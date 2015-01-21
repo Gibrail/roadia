@@ -1,9 +1,11 @@
 package projet.sources;
 
+import java.util.ArrayList;
+
 public class Carte
 {
 	//private String nomCarte = "";
-	private Voie voies[];
+	public ArrayList<Voie> voies = new ArrayList<Voie>();
 	
 	
 	// CONSTRUCTEURS
@@ -16,15 +18,10 @@ public class Carte
 
 
 
-	public Voie[] getVoies()
+	public ArrayList<Voie> getVoies()
 	{
 		return voies;
 	}
 
-
-	public void setVoies(Voie voies[])
-	{
-		this.voies = voies;
-	}
 	
 }

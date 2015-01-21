@@ -19,29 +19,7 @@ public class Voiture
 		return maliste;
 		
 	}
-/*	
-	public Cellule choixSuivant()
-	{
-		
-		ArrayList<Cellule> suivantsDesordre = suivantsAleatoire();
-		Iterator<Cellule> it = suivantsDesordre.iterator();
-		Cellule toReturn = null;
-		//Cellule toReturn = it.next();
-		while ( (it.hasNext()) )
-		{
-			if(it.next().isOccupe() == true)
-			{
-				suivantsDesordre.remove(0);
-			}
-			else if (it.next().isOccupe() == false)
-			{
-				toReturn=it.next();
-				break;
-			}
-		}
-		return toReturn;
-	}
-*/	
+
 	public Cellule choixSuivant()
 	{
 		
