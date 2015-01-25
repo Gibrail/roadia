@@ -46,6 +46,14 @@ public class Voie
 	
 	
 	
+	public Cellule lastCell()
+	{
+		Cellule lastCellule = this.getVoie()[this.getVoie().length -1];
+		return lastCellule;
+	}
+	
+	
+	
 	//MUTATEURS
 	public String getNomVoie() {
 		return nomVoie;
