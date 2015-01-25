@@ -18,12 +18,45 @@ public class Carrefour
 		this.sudOuest = new Cellule("SO");
 		this.sudEst = new Cellule("SE");
 		
-		this.nordOuest.suivants.add(nordEst);
-		this.nordEst.suivants.add(sudOuest);
+		this.nordOuest.suivants.add(sudOuest);
+		this.nordEst.suivants.add(nordOuest);
 		this.sudOuest.suivants.add(sudEst);
-		this.sudEst.suivants.add(nordOuest);
+		this.sudEst.suivants.add(nordEst);
 	
 	}
+	
+	/**
+	 * Connecte une route à un carrefour
+	 * */
+	public void connexion(Route route, String direction)
+	{
+		if(direction=="NORD")
+		{
+			route.voieUne.lastCell().suivants.add(nordOuest);
+			this.nordEst.suivants.add(route.voieDeux.getVoie()[0]);
+		}
+		else if(direction=="SUD")
+		{
+			route.voieUne.lastCell().suivants.add(sudEst);
+			this.sudOuest.suivants.add(route.voieDeux.getVoie()[0]);			
+		}
+		else if(direction=="EST")
+		{
+			route.voieUne.lastCell().suivants.add(nordEst);
+			this.sudEst.suivants.add(route.voieDeux.getVoie()[0]);			
+		}
+		else if(direction=="OUEST")
+		{
+			route.voieUne.lastCell().suivants.add(sudOuest);
+			this.nordOuest.suivants.add(route.voieDeux.getVoie()[0]);			
+		}
+		else
+		{
+			System.out.println("ERREUR : Aucune direction !");
+		}
+	}
+	
+	
 	
 	public String toString()
 	{

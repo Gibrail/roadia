@@ -50,11 +50,11 @@ public class Main
 		System.out.println("Initial collection: "+listeExemple);
 		Collections.shuffle(listeExemple);
 		System.out.println("Final   collection: "+listeExemple);
-
+*/
 		Voie voie1 = new Voie("A", 7);
 		Voie voie2 = new Voie("B", 4);
 		Voie voie3 = new Voie("C", 5);
-		Cellule lastCell = voie1.getVoie()[voie1.getVoie().length -1];
+		Cellule lastCell = voie1.lastCell();
 
 		System.out.println(voie1);
 		System.out.println(voie2);
@@ -63,6 +63,8 @@ public class Main
 		lastCell.suivants.add(voie2.getVoie()[0]);
 		lastCell.suivants.add(voie3.getVoie()[0]);
 		System.out.println(lastCell);
+		
+/*
 		Voiture voiture1 = new Voiture("TwingoBruno",voie1);
 		for(int i=0; i<10; i++)
 		{
