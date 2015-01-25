@@ -1,8 +1,6 @@
 package projet.tests;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
+import projet.sources.Carrefour;
 import projet.sources.Cellule;
 import projet.sources.Voie;
 import projet.sources.Voiture;
@@ -13,6 +11,10 @@ public class Main
 
 	public static void main(String[] args) 
 	{
+		
+		
+		Carrefour carrefour1 = new Carrefour("1");
+		System.out.println(carrefour1);
 /*
 		Cellule cell1 = new Cellule("cellule1");
 		Cellule cell2 = new Cellule("Bruno 2");
@@ -40,7 +42,7 @@ public class Main
 		System.out.println("Initial collection: "+listeExemple);
 		Collections.shuffle(listeExemple);
 		System.out.println("Final   collection: "+listeExemple);
-*/
+
 		Voie voie1 = new Voie("A", 7);
 		Voie voie2 = new Voie("B", 4);
 		Voie voie3 = new Voie("C", 5);
@@ -62,7 +64,7 @@ public class Main
 			System.out.println(voie3);
 		}
 		
-/*		
+
 		System.out.println(voie2);
 		
 		Voiture voiture1 = new Voiture("VoitureTest1",voie2);
