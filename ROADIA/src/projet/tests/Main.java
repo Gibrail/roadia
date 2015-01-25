@@ -1,9 +1,6 @@
 package projet.tests;
+import projet.sources.*;
 
-import projet.sources.Carrefour;
-import projet.sources.Cellule;
-import projet.sources.Voie;
-import projet.sources.Voiture;
 
 
 public class Main 
@@ -11,11 +8,22 @@ public class Main
 
 	public static void main(String[] args) 
 	{
+		Route route66 = new Route("66", "A", "B", 6);
+		System.out.println(route66);
 		
 		
+		
+/*		
 		Carrefour carrefour1 = new Carrefour("1");
 		System.out.println(carrefour1);
-/*
+		Voiture voiture1 = new Voiture(carrefour1.nordOuest);
+		for(int i=0; i<10; i++)
+		{
+			voiture1.seDeplace();
+			System.out.println(carrefour1);
+
+		}
+
 		Cellule cell1 = new Cellule("cellule1");
 		Cellule cell2 = new Cellule("Bruno 2");
 		cell2.setOccupe(true);

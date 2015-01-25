@@ -9,6 +9,10 @@ public class Voiture
 	private String nomVoiture = "";
 	private Cellule celluleCourante = null;
 	
+	
+	
+	//METHODES
+	
 	/**
 	 * Retourne les suivants de la cellule courante dans le désordre
 	 * */
@@ -41,7 +45,7 @@ public class Voiture
 
 	
 
-	//METHODE
+
 	
 	public boolean seDeplace()
 	{
@@ -92,6 +96,8 @@ public class Voiture
 		this.celluleCourante = cell;
 		this.celluleCourante.setOccupe(true);
 	}
+	
+	
 
 	
 	// MUTATEURS
