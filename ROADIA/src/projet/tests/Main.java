@@ -8,9 +8,7 @@ public class Main
 
 	public static void main(String[] args) 
 	{
-		Route route66 = new Route("66", "A", "B", 6);
-		System.out.println(route66);
-		
+
 		
 		
 /*		
@@ -50,7 +48,7 @@ public class Main
 		System.out.println("Initial collection: "+listeExemple);
 		Collections.shuffle(listeExemple);
 		System.out.println("Final   collection: "+listeExemple);
-*/
+
 		Voie voie1 = new Voie("A", 7);
 		Voie voie2 = new Voie("B", 4);
 		Voie voie3 = new Voie("C", 5);
@@ -64,7 +62,7 @@ public class Main
 		lastCell.suivants.add(voie3.getVoie()[0]);
 		System.out.println(lastCell);
 		
-/*
+
 		Voiture voiture1 = new Voiture("TwingoBruno",voie1);
 		for(int i=0; i<10; i++)
 		{
@@ -82,5 +80,26 @@ public class Main
 		voiture1.seDeplace();
 		System.out.println(voie2);
 */
+		
+		
+		Route route1 = new Route("1", "A", "B", 8);
+		Route route2 = new Route("2", "C", "D", 5);
+		Route route3 = new Route("3", "E", "F", 6);
+		Carrefour carrefour1 = new Carrefour("0");
+		carrefour1.connexion(route1, "OUEST");
+		carrefour1.connexion(route2, "NORD");
+		carrefour1.connexion(route3, "SUD");
+		
+		Voiture voiture1 = new Voiture("TwingoBruno",route1.voieUne);
+		
+		for(int i=0; i<10; i++)
+		{
+			voiture1.seDeplace();
+			System.out.println(route1);
+			System.out.println(carrefour1);
+			System.out.println(route2);
+			System.out.println(route3);
+		}
+		
 	}
 }
