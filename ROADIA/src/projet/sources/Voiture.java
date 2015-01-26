@@ -4,17 +4,25 @@ import java.util.Collections;
 import java.util.Iterator;
 
 
-public class Voiture 
+public class Voiture extends Thread
 {
 	private String nomVoiture = "";
 	private Cellule celluleCourante = null;
 	
 	
 	
-	//METHODES
+	//METHODES  
+	
+	
+	public void run()
+	{
+		this.seDeplace();
+	}
+	
+	
 	
 	/**
-	 * Retourne les suivants de la cellule courante dans le désordre
+	 * Retourne les suivants de la cellule courante dans le dÃ©sordre
 	 * */
 	public ArrayList<Cellule> suivantsAleatoire()
 	{
@@ -76,23 +84,30 @@ public class Voiture
 	
 	// CONSTRUCTEURS
 	
-	
+
 	public Voiture(String nouveauNomVoiture, Voie voie)
 	{
+		super(nouveauNomVoiture);
 		this.nomVoiture = nouveauNomVoiture;
-		//TODO la voiture ne doit pas s'instancier là où il y en a une
+		//TODO la voiture ne doit pas s'instancier lÃ  oÃ¹ il y en a une
 		int nombreAleatoire = 1 + (int)(Math.random() * ((voie.getVoie().length -1) ));
 		if((voie.getVoie().length -1) <= 1)
 		{
 			nombreAleatoire = 0;
 		}
-		System.out.println(nombreAleatoire);
+		
+		while(voie.getVoie()[nombreAleatoire].isOccupe() == true)
+		{
+			nombreAleatoire = 1 + (int)(Math.random() * ((voie.getVoie().length -1) ));
+		}
 		this.celluleCourante = voie.getVoie()[nombreAleatoire];
-		this.celluleCourante.setOccupe(true);
+		this.celluleCourante.setOccupe(true);		
 	}
 	
-	public Voiture(Cellule cell)
+	public Voiture(String nouveauNomVoiture, Cellule cell)
 	{
+		super(nouveauNomVoiture);
+		this.nomVoiture = nouveauNomVoiture;
 		this.celluleCourante = cell;
 		this.celluleCourante.setOccupe(true);
 	}
