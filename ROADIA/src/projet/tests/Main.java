@@ -90,16 +90,26 @@ public class Main
 		carrefour1.connexion(route2, "NORD");
 		carrefour1.connexion(route3, "SUD");
 		
+		
 		Voiture voiture1 = new Voiture("TwingoBruno",route1.voieUne);
+		Voiture voiture2 = new Voiture("FerrariGibrail",route3.voieUne);
+		
+		System.out.println(route1);
+		System.out.println(carrefour1);
+		System.out.println(route2);
+		System.out.println(route3);
+		
+
 		
 		for(int i=0; i<10; i++)
 		{
-			voiture1.seDeplace();
+			voiture1.run();
+			voiture2.run();
 			System.out.println(route1);
 			System.out.println(carrefour1);
 			System.out.println(route2);
 			System.out.println(route3);
 		}
-		
+
 	}
 }
